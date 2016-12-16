@@ -1,0 +1,21 @@
+.os-tool-rgb2hex {
+    position: relative;
+    .rgb2hex-opt {
+        float: left;
+        width: 50%;
+    }
+    .rgb2hex-preview {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+    .rgb2hex-color {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        width: 128px;
+        height: 128px;
+        margin: -95px 0 0 -64px;
+        border: 1px solid #eee;
+    }
+}

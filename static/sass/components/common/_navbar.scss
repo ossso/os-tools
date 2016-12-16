@@ -1,0 +1,18 @@
+.os-tool-navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 100%;
+    margin-left: -640px;
+    background: $layuiNavColor;
+    .os-tool-logo {
+        padding: 0 20px;
+        h1 {
+            line-height: 48px;
+            font-size: 24px;
+            font-weight: 300;
+            color: #fff;
+        }
+    }
+}

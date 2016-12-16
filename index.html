@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阳光工具包 - Tool.oss.so</title>
+    <link rel="stylesheet" href="./static/libs/layui/css/layui.css">
+    <link rel="stylesheet" href="./static/css/tools.css">
+</head>
+<body>
+<div class="os-tool-container container">
+    <div class="os-tool-navbar">
+        <ul class="layui-nav layui-nav-tree">
+            <li class="os-tool-logo"><h1>阳光工具包</h1></li>
+            <li class="layui-nav-item"><a class="nav-anchor" href="#rgb2hex">RGB与HEX互转</a></li>
+            <li class="layui-nav-item"><a href="#opacity">不透明值换算</a></li>
+        </ul>
+    </div>
+    <div class="os-tool-main">
+        <div class="os-tool-item">
+            <a class="nav-point" name="rgb2hex"></a>
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>RGB与HEX互转</legend>
+            </fieldset>
+            <div class="os-tool-rgb2hex clear">
+                <div class="rgb2hex-opt">
+                    <form onsubmit="return false" class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Red</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="title" placeholder="请输入0-255之间数值" class="layui-input rgb2hex-r">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Green</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="title" placeholder="请输入0-255之间数值" class="layui-input rgb2hex-g">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Blue</label>
+                            <div class="layui-input-block">
+                                <input type="number" name="title" placeholder="请输入0-255之间数值" class="layui-input rgb2hex-b">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Hex</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" placeholder="请输入16进制颜色值" class="layui-input rgb2hex-hex">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn rgb2hex-submit">转换</button>
+                                <button type="reset" class="layui-btn layui-btn-primary rgb2hex-reset">清空</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="rgb2hex-preview">
+                    <div class="rgb2hex-color"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./static/libs/layui/layui.js"></script>
+<script>
+layui.use('form',function() {
+    var form = layui.form();
+})
+</script>
+</body>
+</html>
