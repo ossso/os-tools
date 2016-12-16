@@ -1,1 +1,12 @@
 @import "tools/rgb2hex";
+@import "tools/n10216";
+
+.os-tool-item {
+    margin-bottom: 20px;
+    .os-tools-ask {
+        display: inline-block;
+        height: 18px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+}

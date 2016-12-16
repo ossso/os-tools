@@ -57,9 +57,9 @@ a {
 .clear {clear:both;}
 .clear:after,.clear:before {content: '';clear:both;display: table;}
 
-*,*::before,*::after {
-    box-sizing: border-box;
-}
+// *,*::before,*::after {
+//     box-sizing: border-box;
+// }
 
 .container {
     width: $lWidth;
