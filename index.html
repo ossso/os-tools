@@ -165,6 +165,7 @@ layui.config({
 }).extend({
     rgb2hex: 'rgb2hex',
     n10216: 'n10216',
+    zoom: 'zoom',
 });
 layui.use(['form','element','layer','jquery'],function() {
     var element = layui.element();
@@ -209,6 +210,22 @@ layui.use(['rgb2hex','jquery'],function() {
             'n16Inp': '.n10216-16',
         }
     },layui.jquery);
+}).use(['zoom','jquery'],function() {
+    var $ = layui.jquery;
+    var zoom = new layui.zoom({
+        dom: {
+            'zoomBtn': '.zoom-submit',
+            'width': '.zoom-width',
+            'height': '.zoom-height',
+            'scale': '.zoom-scale',
+            'lock': '.zoom-lock',
+        }
+    },layui.jquery);
+
+    $(document).on('click','.zoom-lock + .layui-form-switch',function() {
+        zoom.data.lock_width = zoom.dom.width.val() || 0;
+        zoom.data.lock_height = zoom.dom.height.val() || 0;
+    })
 })
 </script>
 </body>
