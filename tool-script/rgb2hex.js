@@ -39,13 +39,13 @@
 
     RGB2HEX.prototype.handler = function(type) {
         if (type == 'rgb') {
-            if (/[^0-255]/.test(this.dom.rgb_r.value) || this.dom.rgb_r.value.length == 0) {
+            if (!/\d{0,3}/.test(this.dom.rgb_r.value) || this.dom.rgb_r.value.length == 0 || this.dom.rgb_r.value > 255 || this.dom.rgb_r.value < 0) {
                 this.tips('R值不合法');
                 return this;
-            } else if (/[^0-255]/.test(this.dom.rgb_g.value) || this.dom.rgb_g.value.length == 0) {
+            } else if (!/\d{0,3}/.test(this.dom.rgb_g.value) || this.dom.rgb_g.value.length == 0 || this.dom.rgb_g.value > 255 || this.dom.rgb_g.value < 0) {
                 this.tips('G值不合法');
                 return this;
-            } else if (/[^0-255]/.test(this.dom.rgb_b.value) || this.dom.rgb_b.value.length == 0) {
+            } else if (!/\d{0,3}/.test(this.dom.rgb_b.value) || this.dom.rgb_b.value.length == 0 || this.dom.rgb_b.value > 255 || this.dom.rgb_b.value < 0) {
                 this.tips('B值不合法');
                 return this;
             }
